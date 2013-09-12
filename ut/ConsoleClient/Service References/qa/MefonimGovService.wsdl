@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://malamteam/IMefonimGovService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://malamteam/IMefonimGovService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://malamteam/IMefonimGovService/Imports">
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd0" namespace="http://malamteam/IMefonimGovService" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd2" namespace="http://malamteam/AddressResponse" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd3" namespace="http://malamteam/Address" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd4" namespace="http://malamteam/SearchRequest" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd5" namespace="http://malamteam/SearchResponse" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd6" namespace="http://malamteam/ShiltonMekomi" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd7" namespace="http://malamteam/Mitkanim" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd8" namespace="http://malamteam/Mahoz" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd9" namespace="http://malamteam/Rashuyot" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd10" namespace="http://malamteam/Mehozot" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd11" namespace="http://malamteam/SearchMitkanimRequest" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd12" namespace="http://malamteam/SearchMitkanimResponse" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd13" namespace="http://malamteam/AgesTypeResponse" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd14" namespace="http://malamteam/AgeType" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd15" namespace="http://malamteam/RashuyotResponse" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd16" namespace="http://malamteam/YeshuvimResponse" />
+      <xsd:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd17" namespace="http://malamteam/Yeshuvim" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMefonimGovService_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_GetAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddress" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_GetAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_SearchMitkanim_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchMitkanim" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_SearchMitkanim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchMitkanimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_GetAgesType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgesType" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_GetAgesType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgesTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_GetRashuyot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRashuyot" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_GetRashuyot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRashuyotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_GetYeshuvim_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetYeshuvim" />
+  </wsdl:message>
+  <wsdl:message name="IMefonimGovService_GetYeshuvim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetYeshuvimResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMefonimGovService">
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/Ping" message="tns:IMefonimGovService_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/PingResponse" message="tns:IMefonimGovService_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <wsdl:input wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/GetAddress" message="tns:IMefonimGovService_GetAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/GetAddressResponse" message="tns:IMefonimGovService_GetAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/Search" message="tns:IMefonimGovService_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/SearchResponse" message="tns:IMefonimGovService_Search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchMitkanim">
+      <wsdl:input wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/SearchMitkanim" message="tns:IMefonimGovService_SearchMitkanim_InputMessage" />
+      <wsdl:output wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/SearchMitkanimResponse" message="tns:IMefonimGovService_SearchMitkanim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgesType">
+      <wsdl:input wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/GetAgesType" message="tns:IMefonimGovService_GetAgesType_InputMessage" />
+      <wsdl:output wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/GetAgesTypeResponse" message="tns:IMefonimGovService_GetAgesType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRashuyot">
+      <wsdl:input wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/GetRashuyot" message="tns:IMefonimGovService_GetRashuyot_InputMessage" />
+      <wsdl:output wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/GetRashuyotResponse" message="tns:IMefonimGovService_GetRashuyot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYeshuvim">
+      <wsdl:input wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/GetYeshuvim" message="tns:IMefonimGovService_GetYeshuvim_InputMessage" />
+      <wsdl:output wsaw:Action="http://malamteam/IMefonimGovService/IMefonimGovService/GetYeshuvimResponse" message="tns:IMefonimGovService_GetYeshuvim_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

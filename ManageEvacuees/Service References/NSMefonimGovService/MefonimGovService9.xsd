@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/Rashuyot" elementFormDefault="qualified" targetNamespace="http://malamteam/Rashuyot" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd13" namespace="http://malamteam/Mehozot" />
+  <xs:complexType name="Rashuyot">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://malamteam/Mehozot" minOccurs="0" name="Mehoz" nillable="true" type="q1:Mehozot" />
+      <xs:element minOccurs="0" name="RashutID" type="xs:int" />
+      <xs:element minOccurs="0" name="RashutName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rashuyot" nillable="true" type="tns:Rashuyot" />
+  <xs:complexType name="ArrayOfRashuyot">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rashuyot" nillable="true" type="tns:Rashuyot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRashuyot" nillable="true" type="tns:ArrayOfRashuyot" />
+</xs:schema>

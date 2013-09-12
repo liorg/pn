@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2fd832c9-0f6a-43c0-8309-8adaaebe01c2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://crm11moin:81/MefonimGovService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MefonimGovService20.xsd" MetadataType="Schema" ID="cb340e12-0470-41cd-b2b0-13ea4424dc8d" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MefonimGovService201.xsd" MetadataType="Schema" ID="91da57e9-5a42-4d37-a0a4-aeaf13d2a1f7" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd13" />
+    <MetadataFile FileName="MefonimGovService202.xsd" MetadataType="Schema" ID="172c41ec-42f4-406f-ae22-dde6433cf917" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd14" />
+    <MetadataFile FileName="MefonimGovService203.xsd" MetadataType="Schema" ID="5f03e1d7-5af0-4d71-b855-8e9659505bbc" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd15" />
+    <MetadataFile FileName="MefonimGovService204.xsd" MetadataType="Schema" ID="ac0e6ef1-3dec-490c-9b8f-c0ac076d6f34" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd8" />
+    <MetadataFile FileName="MefonimGovService205.xsd" MetadataType="Schema" ID="2b397827-5176-4bc1-ab35-3b2106376fcd" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd17" />
+    <MetadataFile FileName="MefonimGovService206.xsd" MetadataType="Schema" ID="7c5288ee-2fe4-46b5-9ebd-4221790db792" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd18" />
+    <MetadataFile FileName="MefonimGovService207.xsd" MetadataType="Schema" ID="f7663413-ca31-4604-aaa5-57a78c0cca39" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd19" />
+    <MetadataFile FileName="MefonimGovService3.wsdl" MetadataType="Wsdl" ID="8feea9dc-9459-429c-b724-8846f63c9d6c" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="MefonimGovService208.xsd" MetadataType="Schema" ID="3418377d-6d93-4de7-b9e8-6abb52e66529" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MefonimGovService209.xsd" MetadataType="Schema" ID="b58b5c5b-4014-4b91-910b-dfc9f11e58bb" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd20" />
+    <MetadataFile FileName="MefonimGovService2010.xsd" MetadataType="Schema" ID="b1c86404-4986-4ede-8137-43cec15b804f" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MefonimGovService2011.xsd" MetadataType="Schema" ID="029a64b0-a849-477d-88c2-818727e1e49d" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MefonimGovService2012.xsd" MetadataType="Schema" ID="6575d55a-c8ca-43a7-905c-bf358976f60f" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd7" />
+    <MetadataFile FileName="MefonimGovService2013.xsd" MetadataType="Schema" ID="eade9e77-fd50-4681-8020-3293634f6359" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd11" />
+    <MetadataFile FileName="MefonimGovService2014.xsd" MetadataType="Schema" ID="da83dae5-aa2c-419a-8608-9da492f748ef" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd5" />
+    <MetadataFile FileName="MefonimGovService2015.xsd" MetadataType="Schema" ID="2fa54ff6-d60c-41e8-a203-e765df8b1332" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd12" />
+    <MetadataFile FileName="MefonimGovService.xsd" MetadataType="Schema" ID="92b873ef-275d-4ad0-b9d4-e6957342d7a3" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd21" />
+    <MetadataFile FileName="MefonimGovService1.disco" MetadataType="Disco" ID="ce188689-08f5-431a-885a-90542743dc98" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?disco" />
+    <MetadataFile FileName="MefonimGovService2016.xsd" MetadataType="Schema" ID="fb533c1f-fede-4865-aa4f-906d9ac1f293" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd9" />
+    <MetadataFile FileName="MefonimGovService31.wsdl" MetadataType="Wsdl" ID="ef4094e1-ba19-4946-b80d-1adca432621a" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?wsdl" />
+    <MetadataFile FileName="MefonimGovService2017.xsd" MetadataType="Schema" ID="7d681faa-0213-4c8d-92e4-a4841dea1ceb" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MefonimGovService2018.xsd" MetadataType="Schema" ID="299c997f-6148-4db8-86ab-76f2f936db86" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd16" />
+    <MetadataFile FileName="MefonimGovService2019.xsd" MetadataType="Schema" ID="1c7ea191-6ca0-41e8-92e5-663c6a937da0" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd6" />
+    <MetadataFile FileName="MefonimGovService2020.xsd" MetadataType="Schema" ID="55519584-7c3e-45fe-9aef-c2dc260ce5a2" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd10" />
+    <MetadataFile FileName="MefonimGovService32.wsdl" MetadataType="Wsdl" ID="cb4b592a-b9ef-462f-9d40-5ec31430a421" SourceId="1" SourceUrl="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

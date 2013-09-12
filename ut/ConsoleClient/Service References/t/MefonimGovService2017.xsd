@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/IMefonimGovService" elementFormDefault="qualified" targetNamespace="http://malamteam/IMefonimGovService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd2" namespace="http://malamteam/LoginRequest" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd3" namespace="http://malamteam/LoginResponse" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd4" namespace="http://malamteam/AddressResponse" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd6" namespace="http://malamteam/SearchRequest" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd8" namespace="http://malamteam/SearchResponse" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd14" namespace="http://malamteam/SearchMitkanimRequest" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd15" namespace="http://malamteam/SearchMitkanimResponse" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd17" namespace="http://malamteam/AgesTypeResponse" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd19" namespace="http://malamteam/RashuyotResponse" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd20" namespace="http://malamteam/YeshuvimResponse" />
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="s" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://malamteam/LoginRequest" minOccurs="0" name="request" nillable="true" type="q1:LoginRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://malamteam/LoginResponse" minOccurs="0" name="LoginResult" nillable="true" type="q2:LoginResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddress">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://malamteam/AddressResponse" minOccurs="0" name="GetAddressResult" nillable="true" type="q3:AddressResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Search">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://malamteam/SearchRequest" minOccurs="0" name="request" nillable="true" type="q4:SearchRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://malamteam/SearchResponse" minOccurs="0" name="SearchResult" nillable="true" type="q5:SearchResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchMitkanim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://malamteam/SearchMitkanimRequest" minOccurs="0" name="request" nillable="true" type="q6:SearchMitkanimRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchMitkanimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://malamteam/SearchMitkanimResponse" minOccurs="0" name="SearchMitkanimResult" nillable="true" type="q7:SearchMitkanimResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgesType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgesTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://malamteam/AgesTypeResponse" minOccurs="0" name="GetAgesTypeResult" nillable="true" type="q8:AgesTypeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRashuyot">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRashuyotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://malamteam/RashuyotResponse" minOccurs="0" name="GetRashuyotResult" nillable="true" type="q9:RashuyotResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYeshuvim">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYeshuvimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://malamteam/YeshuvimResponse" minOccurs="0" name="GetYeshuvimResult" nillable="true" type="q10:YeshuvimResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMitkanim">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMitkanimResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://malamteam/RashuyotResponse" minOccurs="0" name="GetMitkanimResult" nillable="true" type="q11:MitkanimResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

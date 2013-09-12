@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/LoginRequest" elementFormDefault="qualified" targetNamespace="http://malamteam/LoginRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LoginRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginRequest" nillable="true" type="tns:LoginRequest" />
+</xs:schema>

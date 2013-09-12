@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/SearchMitkanimResponse" elementFormDefault="qualified" targetNamespace="http://malamteam/SearchMitkanimResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SearchMitkanimResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MahozName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MehozId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MitkanName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MitkanNum" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RashutID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RashutName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sum19To65" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Sum3" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Sum4To6" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Sum66" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Sum7To18" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SumAll" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchMitkanimResponse" nillable="true" type="tns:SearchMitkanimResponse" />
+</xs:schema>

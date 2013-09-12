@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/RashuyotResponse" elementFormDefault="qualified" targetNamespace="http://malamteam/RashuyotResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd12" namespace="http://malamteam/Rashuyot" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd10" namespace="http://malamteam/Mitkanim" />
+  <xs:complexType name="RashuyotResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element xmlns:q1="http://malamteam/Rashuyot" minOccurs="0" name="Rashuyot" nillable="true" type="q1:ArrayOfRashuyot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RashuyotResponse" nillable="true" type="tns:RashuyotResponse" />
+  <xs:complexType name="MitkanimResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element xmlns:q2="http://malamteam/Mitkanim" minOccurs="0" name="Mitkanim" nillable="true" type="q2:ArrayOfMitkanim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MitkanimResponse" nillable="true" type="tns:MitkanimResponse" />
+</xs:schema>

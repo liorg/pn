@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cdf4fb78-6b03-412b-83dc-122f05bb8942" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://crm11moin/MefonimGovService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MefonimGovService.xsd" MetadataType="Schema" ID="2516edd9-98cc-4ca2-b883-1f9d34ccc8e0" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd8" />
+    <MetadataFile FileName="MefonimGovService.wsdl" MetadataType="Wsdl" ID="fd45aa5f-8388-4ddd-b10c-4a399d515a48" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="MefonimGovService1.wsdl" MetadataType="Wsdl" ID="98c1bee4-826d-426a-af72-1968574ee351" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="MefonimGovService1.xsd" MetadataType="Schema" ID="dad6c56c-f6c0-44b2-94fd-a65258ccd663" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd14" />
+    <MetadataFile FileName="MefonimGovService2.xsd" MetadataType="Schema" ID="c73a70e8-4efb-4ea0-83d7-82fcdde16bbd" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd20" />
+    <MetadataFile FileName="MefonimGovService3.xsd" MetadataType="Schema" ID="41e3b176-dac8-49ca-891b-6e56bc8e08f0" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MefonimGovService4.xsd" MetadataType="Schema" ID="e473e632-4bd2-42e0-88a5-52090fc3160c" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MefonimGovService5.xsd" MetadataType="Schema" ID="473d8dde-9889-4935-b57f-e5658f7dccbe" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd5" />
+    <MetadataFile FileName="MefonimGovService6.xsd" MetadataType="Schema" ID="feb85bf6-1e4f-41ab-947c-a8740e62602d" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd7" />
+    <MetadataFile FileName="MefonimGovService7.xsd" MetadataType="Schema" ID="3a3adc3b-09d5-43c6-964c-76f5d93b10fb" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd18" />
+    <MetadataFile FileName="MefonimGovService8.xsd" MetadataType="Schema" ID="a13c01b3-e5da-4a97-8b78-4b2f03752cee" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MefonimGovService9.xsd" MetadataType="Schema" ID="5f0ff308-1b21-456f-8307-f49487ad4e06" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd12" />
+    <MetadataFile FileName="MefonimGovService10.xsd" MetadataType="Schema" ID="d7255606-6103-4deb-bac5-2715193cc73e" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd6" />
+    <MetadataFile FileName="MefonimGovService11.xsd" MetadataType="Schema" ID="dc36ad3a-3595-46ee-a86e-b89797148d6e" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd9" />
+    <MetadataFile FileName="MefonimGovService12.xsd" MetadataType="Schema" ID="ac5d261a-e7e7-4b9c-94a1-77683aec65a2" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd11" />
+    <MetadataFile FileName="MefonimGovService13.xsd" MetadataType="Schema" ID="a4d386e0-f9ff-4e38-b138-9db2e6e58e86" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd13" />
+    <MetadataFile FileName="MefonimGovService14.xsd" MetadataType="Schema" ID="5777c711-4723-45ca-bcdb-c756552367d0" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MefonimGovService15.xsd" MetadataType="Schema" ID="b19a46e6-d466-4fd8-88dc-a92fb81a1d64" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd15" />
+    <MetadataFile FileName="MefonimGovService16.xsd" MetadataType="Schema" ID="b2b28f01-c779-4cff-b5b8-cc62c414a0b4" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd17" />
+    <MetadataFile FileName="MefonimGovService.disco" MetadataType="Disco" ID="5d14aad9-f511-4b9b-bd1d-8f6dfaa6dc3f" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?disco" />
+    <MetadataFile FileName="MefonimGovService17.xsd" MetadataType="Schema" ID="0ab4e2f8-9f15-4d25-a620-f8df9c068704" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MefonimGovService18.xsd" MetadataType="Schema" ID="f9b07838-6d9b-4076-9d59-8dd5f3694616" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd16" />
+    <MetadataFile FileName="MefonimGovService19.xsd" MetadataType="Schema" ID="38511e44-1491-407b-8653-f0114e6c9364" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd10" />
+    <MetadataFile FileName="MefonimGovService20.xsd" MetadataType="Schema" ID="093d2946-1bb3-4050-a4e4-103d21c039bb" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd19" />
+    <MetadataFile FileName="MefonimGovService2.wsdl" MetadataType="Wsdl" ID="33d6da13-c43b-4d4d-a687-b5976f61b45e" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

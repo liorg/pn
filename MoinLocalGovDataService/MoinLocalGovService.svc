@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MoinLocalGovDataService.MoinLocalGovService" CodeBehind="MoinLocalGovService.svc.cs" %>

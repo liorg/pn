@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ShiltomMekomi" Class="DocumentsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.218.3.84;Initial Catalog=ShiltomMekomi;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ShiltomMekomiConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.LGSite_GetPortalDocumentsTypesInsp" Method="GetDocumentsTypesInsp">
+    <ElementType Name="LGSite_GetPortalDocumentsTypesInspResult">
+      <Column Name="DocTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocTypeName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LGSite_GetReportDocumentsInsp" Method="GetDocumentsInspection">
+    <Parameter Name="Year" Parameter="year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DocActivity" Parameter="docActivity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FromRow" Parameter="fromRow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ToRow" Parameter="toRow" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LGSite_GetReportDocumentsInspResult">
+      <Column Name="totalRows" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Shem_Rashut" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DocTypeName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DocName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DocId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LGSite_GetPortalDocumentContent" Method="GetDocumentContent">
+    <Parameter Name="DocID" Parameter="docID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LGSite_GetPortalDocumentContentResult">
+      <Column Name="DocPath" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DocExtention" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LGSite_GetReportDocumentsElection" Method="GetDocumentsElection">
+    <Parameter Name="FromRow" Parameter="fromRow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ToRow" Parameter="toRow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fromDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="toDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="LGSite_GetReportDocumentsElectionResult">
+      <Column Name="totalRows" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Shem_Rashut" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DocTypeName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DocName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DocId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AcceptDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DocYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LGSite_GetPortalDocumentsTypes" Method="GetPortalDocumentsTypes">
+    <ElementType Name="LGSite_GetPortalDocumentsTypesResult">
+      <Column Name="DocMainTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocMainTypeName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SysNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LGSite_GetReportDocumentsRashut" Method="GetReportDocumentsRashut">
+    <Parameter Name="p_DocActivity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="p_RashutNumLms" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FromRow" Parameter="fromRow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ToRow" Parameter="toRow" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LGSite_GetReportDocumentsRashutResult">
+      <Column Name="totalRows" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rownum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DocYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DocName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DocId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AcceptDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DocTypeName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\Publish\moin" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="Default Web Site/MoinLocalGovDataService" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="False" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/MoinLocalGovDataService.pdb" publishTime="09/03/2013 11:39:42" />
+    <file relUrl="bin/MoinLocalGovDataService.dll" publishTime="09/03/2013 11:39:42" />
+    <file relUrl="MoinLocalGovService.svc" publishTime="07/14/2010 18:58:22" />
+    <file relUrl="bin/EvacueeModule.pdb" publishTime="09/03/2013 11:39:02" />
+    <file relUrl="Web.config" publishTime="09/03/2013 12:14:29" />
+    <file relUrl="bin/EntityLayer.pdb" publishTime="09/03/2013 11:35:32" />
+    <file relUrl="bin/EvacueeModule.dll" publishTime="09/03/2013 11:39:02" />
+    <file relUrl="bin/EntityLayer.dll" publishTime="09/03/2013 11:35:32" />
+    <file relUrl="MefonimGovService.svc" publishTime="09/03/2013 11:38:29" />
+  </publishProfile>
+</publishData>

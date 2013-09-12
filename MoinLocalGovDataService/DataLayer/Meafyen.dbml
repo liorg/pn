@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ShiltomMekomi" Class="MeafyenDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=10.218.3.84;Initial Catalog=ShiltomMekomi;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ShiltomMekomiConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.LGSite_GetRashutMeafyenim" Method="GetRashutMeafyenim">
+    <Parameter Name="numrashut" Type="System.Double" DbType="Float" />
+    <ElementType Name="LGSite_GetRashutMeafyenimResult">
+      <Column Name="NumMeafyen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ValueId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StringValue" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DateValue" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NumericValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NameMeafyen" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="TypeMeafyen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSelection" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ValueName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Shem_Rashut" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

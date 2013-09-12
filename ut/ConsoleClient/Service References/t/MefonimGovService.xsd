@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/Yeshuvim" elementFormDefault="qualified" targetNamespace="http://malamteam/Yeshuvim" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd13" namespace="http://malamteam/Mehozot" />
+  <xs:complexType name="ArrayOfYeshuvim">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Yeshuvim" nillable="true" type="tns:Yeshuvim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfYeshuvim" nillable="true" type="tns:ArrayOfYeshuvim" />
+  <xs:complexType name="Yeshuvim">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://malamteam/Mehozot" minOccurs="0" name="Mehoz" nillable="true" type="q1:Mehozot" />
+      <xs:element minOccurs="0" name="YeshuvName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YeshuvNum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Yeshuvim" nillable="true" type="tns:Yeshuvim" />
+</xs:schema>

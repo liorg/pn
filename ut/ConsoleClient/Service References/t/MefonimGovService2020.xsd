@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/Mitkanim" elementFormDefault="qualified" targetNamespace="http://malamteam/Mitkanim" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd11" namespace="http://malamteam/Mahoz" />
+  <xs:import schemaLocation="http://crm11moin.gdevdom.goffice.local:81/MefonimGovService.svc?xsd=xsd12" namespace="http://malamteam/Rashuyot" />
+  <xs:complexType name="Mitkanim">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MitkanAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MitkanName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MitkanNum" type="xs:int" />
+      <xs:element minOccurs="0" name="MitkanPhone" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://malamteam/Mahoz" minOccurs="0" name="MitkanType" nillable="true" type="q1:MitkanType" />
+      <xs:element xmlns:q2="http://malamteam/Rashuyot" minOccurs="0" name="Rashut" nillable="true" type="q2:Rashuyot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Mitkanim" nillable="true" type="tns:Mitkanim" />
+  <xs:complexType name="ArrayOfMitkanim">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Mitkanim" nillable="true" type="tns:Mitkanim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMitkanim" nillable="true" type="tns:ArrayOfMitkanim" />
+</xs:schema>
