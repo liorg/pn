@@ -84,5 +84,7 @@
     <Build Include="dbo\Stored Procedures\gs_getAgeType.sql" />
     <Build Include="dbo\Stored Procedures\gs_GetAges.sql" />
     <Build Include="dbo\Stored Procedures\gs_GetAddresses.sql" />
+    <Build Include="dbo\Stored Procedures\gs_updateMefune.sql" />
+    <Build Include="dbo\Stored Procedures\gs_searchMitkan.sql" />
   </ItemGroup>
 </Project>

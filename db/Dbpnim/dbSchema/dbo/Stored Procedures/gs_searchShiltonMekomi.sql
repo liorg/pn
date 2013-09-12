@@ -1,4 +1,5 @@
-﻿-- =============================================
+﻿
+-- =============================================
 -- Author:		Lior Grossman
 -- Create date: 2013-09-11
 -- Description:	Search Mefunim
@@ -6,10 +7,10 @@
  --exec [gs_searchShiltonMekomi] 'MfLastName desc',1,15,@MfDateIncomeBegin='2013-08-11 08:00:01.000',@MfDateIncomeEnd='2013-08-08 12:00:00'
  --exec [gs_searchShiltonMekomi] 'MfLastName desc',1,15,@MfGender=' ז  '
  --exec [gs_searchShiltonMekomi] 'MfAge desc',1,15,@MfAge=5
+--exec [gs_searchShiltonMekomi] 'MfAge desc',1,15,@MfFather='אילן '
   
 CREATE PROCEDURE [dbo].[gs_searchShiltonMekomi]
-   @pOrderBy nvarchar(100),@pCurrentPage int,@pPageSize tinyint
-   
+    @pOrderBy nvarchar(100),@pCurrentPage int,@pPageSize tinyint
     ,@MfDateIncomeBegin datetime=null,@MfDateIncomeEnd datetime=null
     ,@MehozId INT =NULL,@MitkanNum INT =NULL,@RashutID INT =NULL
     ,@MfFirstName nvarchar(MAX)=NULL,@MfLastName nvarchar(MAX)=NULL,@MfGender nvarchar(MAX)=NULL
@@ -41,7 +42,7 @@ END
 SET @intStartRow = (@pCurrentPage -1) * @pPageSize + 1;
 SET @intEndRow   = @pCurrentPage * @pPageSize;   
 
-SELECT Row,MitkanID,MefuneID
+SELECT Row,MefuneSysNum,MitkanID,MefuneID
         ,MfFirstName,MfLastName,MfGender,MfFather,MfAge
         ,IsMfDateOutcome
 	    ,ShiltonMekomiAddress
@@ -86,6 +87,7 @@ FROM
 		,rash.RashutName,rash.RashutID
 		,m.Address as MitkanAddress,m.MitkanName,m.MitkanNum,m.Phone as MitkanPhone
 		,MfDateIncome
+		,MefuneSysNum
 		FROM ShiltonMekomi sm
 		LEFT JOIN dbo.Yeshuvim  y
 		ON sm.MfAddCityCode=y.YeshuvNum
