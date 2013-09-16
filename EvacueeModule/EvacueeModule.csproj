@@ -75,8 +75,13 @@
     <Compile Include="EndPoint\DataContract\Picklists\YeshuvimResponse.cs" />
     <Compile Include="EndPoint\DataContract\SearchMitkanim\SearchMitkanimResponse.cs" />
     <Compile Include="EndPoint\DataContract\SearchMitkanim\SearchMitkanimRequest.cs" />
+    <Compile Include="EndPoint\DataContract\SearchMitkanim\SortingMitkanimField.cs" />
     <Compile Include="EndPoint\DataContract\Search\SearchResponse.cs" />
     <Compile Include="EndPoint\DataContract\Search\SearchRequest.cs" />
+    <Compile Include="EndPoint\DataContract\Search\SortingField.cs" />
+    <Compile Include="EndPoint\DataContract\Search\UpdateMefuneRequest.cs" />
+    <Compile Include="EndPoint\DataContract\Search\UpdateMefuneResponse.cs" />
+    <Compile Include="EndPoint\DataContract\SortingOrder.cs" />
     <Compile Include="EndPoint\Implementation\MefonimGovService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

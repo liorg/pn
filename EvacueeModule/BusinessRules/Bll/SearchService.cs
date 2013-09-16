@@ -23,5 +23,15 @@ namespace Guardian.Moin.EvacueeModule.Bll
         }
 
 
+        public Result<ShiltonMekomi> UpdateMefune(UpdateMefuneRequest request)
+        {
+            var dbContext = new MedamContext(_connString, _log, _error);
+            if (request.ShiltonMekomi != null)
+            {
+                request.ShiltonMekomi.MfDateOutcome = DateTime.Now;
+            }
+            return dbContext.UpdateMefune(request.ShiltonMekomi);
+        }
+
     }
 }

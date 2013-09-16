@@ -27,3 +27,4 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 *.vssscc
 $tf*/
+db/Dbpnim/dbSchema/dbSchema.dbmdl

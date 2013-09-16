@@ -7,11 +7,7 @@ using System.Text;
 
 namespace Guardian.Moin.EvacueeModule.DataContract
 {
-    public enum SortingField { MfLastName = 0, MfFirstName, ReshutAddress,
-    ShiltonMekomiAddress, MfFather, MfGender, MfAge, IsMfDateOutcome, RashutName, MitkanName, MitkanAddress, MitkanPhone
-    };
-
-    public enum SortingOrder{ASC=0,DESC=1};
+   
     [DataContract(Namespace = "http://malamteam/SearchRequest")]
     public class SearchRequest
     {

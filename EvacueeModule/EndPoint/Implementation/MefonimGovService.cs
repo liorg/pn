@@ -56,8 +56,28 @@ namespace Guardian.Moin.EvacueeModule
 
         public SearchMitkanimResponse SearchMitkanim(DataContract.SearchMitkanimRequest request)
         {
-            return null;
+            var response = new SearchMitkanimResponse();
+            var s = new MitkanimService(GetConnectionString(), TraceFile, WriteToLogFile);
+            var result=s.Search(request);
+            response.CurrentPage = request.CurrentPage;
+            response.MaxRowsPerPage = request.MaxRowsPerPage;
+            response.SortingName = request.SortingName;
+            response.SortingOrder = request.SortingOrder;
+            response.IsError = result.IsError;
+            response.ErrorDesc = result.ErrorDesc;
+            response.Data = result.Return;
+            return response;
+        }
 
+        public UpdateMefuneResponse UpdateMefune(UpdateMefuneRequest request)
+        {
+            var response = new UpdateMefuneResponse();
+            var s = new SearchService(GetConnectionString(), TraceFile, WriteToLogFile);
+            var r = s.UpdateMefune(request);
+            response.IsError = r.IsError;
+            response.ErrorDesc = r.ErrorDesc;
+            response.ShiltonMekomi = r.Return;
+            return response;
         }
 
         public AgesTypeResponse GetAgesType()

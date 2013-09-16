@@ -39,8 +39,8 @@ namespace Guardian.Moin.EvacueeModule.DataModel
         [DataMember]
         public bool? IsMfDateOutcome { get; set; }
 
-        //[DataMember]
-        //public DateTime? MfDateOutcome { get; set; }
+        [DataMember]
+        public DateTime? MfDateOutcome { get; set; }
 
         //תאריך קליטה
         [DataMember]

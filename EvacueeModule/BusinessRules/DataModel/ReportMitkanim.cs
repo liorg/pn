@@ -4,13 +4,13 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace EvacueeModule.BusinessRules.DataModel
+namespace Guardian.Moin.EvacueeModule.DataModel
 {
     [DataContract(Namespace = "http://malamteam/ReportMitkanim")]
     public class ReportMitkanim
     {
         [DataMember]
-        public int? MehozId { get; set; }
+        public int? MahozNum { get; set; }
         [DataMember]
         public string MahozName { get; set; }
 

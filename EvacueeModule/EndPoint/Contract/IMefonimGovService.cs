@@ -43,6 +43,11 @@ namespace Guardian.Moin.EvacueeModule
         [OperationContract]
         MitkanimResponse GetMitkanim();
 
+        [OperationContract]
+        UpdateMefuneResponse UpdateMefune(UpdateMefuneRequest request);
+
+
+
 
         
     }
