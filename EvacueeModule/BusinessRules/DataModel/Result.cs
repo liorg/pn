@@ -15,4 +15,8 @@ namespace Guardian.Moin.EvacueeModule.DataModel
     {
         public T Return { get; set; }
     }
+    public class ResultWithTotalRows<T> : Result<T>
+    {
+        public int TotalRows { get; set; }
+    }
 }

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ManageEvacuateds {
+namespace ManageEvacuees {
     
     
     public partial class SiteMaster {

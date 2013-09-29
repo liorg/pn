@@ -1,5 +1,5 @@
 ﻿--exec gs_GetAddresses
-create PROCEDURE [dbo].[gs_GetAges]
+create PROCEDURE gs_GetAges
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from

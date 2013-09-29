@@ -57,6 +57,7 @@
     <Compile Include="BusinessRules\Bll\SearchService.cs" />
     <Compile Include="BusinessRules\DataModel\Address.cs" />
     <Compile Include="BusinessRules\DataModel\AgeType.cs" />
+    <Compile Include="BusinessRules\DataModel\Rehovot.cs" />
     <Compile Include="BusinessRules\DataModel\ReportMitkanim.cs" />
     <Compile Include="BusinessRules\DataModel\Yeshuvim.cs" />
     <Compile Include="BusinessRules\DataModel\Mehozot.cs" />

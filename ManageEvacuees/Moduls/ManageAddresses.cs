@@ -9,27 +9,19 @@ namespace ManageEvacuees.Moduls
 {
     public static class ManageAddresses
     {
-        //public static Rashuyot[] GetAreas()
-        //{
-        //    MefonimGovServiceClient client = new MefonimGovServiceClient("MefonimGovServiceEndpoint");
-        //    var response = client.GetRashuyot();
-        //    Rashuyot r = new Rashuyot();
-
-        //    if (!response.IsError)
-        //    {
-        //        return response.Rashuyot;
-        //    }
-        //    else
-        //    {
-        //        return null;
-        //    }
-        //}
-        public static object GetAreas()
+        public static Rashuyot[] GetAreas()
         {
             MefonimGovServiceClient client = new MefonimGovServiceClient("MefonimGovServiceEndpoint");
-            return client.Ping("sara!!!");
-          
+            var response = client.GetRashuyot();
             
+            if (!response.IsError)
+            {
+                return response.Rashuyot;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public static Yeshuvim[] GetCities()
@@ -46,7 +38,7 @@ namespace ManageEvacuees.Moduls
             }
         }
 
-        public static Address[] GetAddresses()
+        public static Address[] GetStreets()
         {
             MefonimGovServiceClient client = new MefonimGovServiceClient("MefonimGovServiceEndpoint");
             var response = client.GetAddress();

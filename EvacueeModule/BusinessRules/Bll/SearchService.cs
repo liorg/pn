@@ -16,7 +16,7 @@ namespace Guardian.Moin.EvacueeModule.Bll
         {
         }
 
-        public Result<IEnumerable<ShiltonMekomi>>  Search(SearchRequest request)
+        public ResultWithTotalRows<IEnumerable<ShiltonMekomi>> Search(SearchRequest request)
         {
              var dbContext = new MedamContext(_connString, _log, _error);
            return dbContext.GetShiltonMekomiByModelAndPages(request);

@@ -15,7 +15,7 @@ namespace Guardian.Moin.EvacueeModule.Bll
         {
         }
 
-        public Result<IEnumerable<ReportMitkanim>> Search(SearchMitkanimRequest request)
+        public ResultWithTotalRows<IEnumerable<ReportMitkanim>> Search(SearchMitkanimRequest request)
         {
             var dbContext = new MedamContext(_connString, _log, _error);
             return dbContext.ExcuteReportMitkanim(request);

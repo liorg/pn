@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://malamteam/Yeshuvim" elementFormDefault="qualified" targetNamespace="http://malamteam/Yeshuvim" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://crm11moin/MefonimGovService.svc?xsd=xsd13" namespace="http://malamteam/Mehozot" />
-  <xs:complexType name="ArrayOfYeshuvim">
+<xs:schema xmlns:tns="http://malamteam/UpdateMefuneRequest" elementFormDefault="qualified" targetNamespace="http://malamteam/UpdateMefuneRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd9" namespace="http://malamteam/ShiltonMekomi" />
+  <xs:complexType name="UpdateMefuneRequest">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Yeshuvim" nillable="true" type="tns:Yeshuvim" />
+      <xs:element xmlns:q1="http://malamteam/ShiltonMekomi" minOccurs="0" name="ShiltonMekomi" nillable="true" type="q1:ShiltonMekomi" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfYeshuvim" nillable="true" type="tns:ArrayOfYeshuvim" />
-  <xs:complexType name="Yeshuvim">
-    <xs:sequence>
-      <xs:element xmlns:q1="http://malamteam/Mehozot" minOccurs="0" name="Mehoz" nillable="true" type="q1:Mehozot" />
-      <xs:element minOccurs="0" name="YeshuvName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="YeshuvNum" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Yeshuvim" nillable="true" type="tns:Yeshuvim" />
+  <xs:element name="UpdateMefuneRequest" nillable="true" type="tns:UpdateMefuneRequest" />
 </xs:schema>

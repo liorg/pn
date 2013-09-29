@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/SearchRequest" elementFormDefault="qualified" targetNamespace="http://malamteam/SearchRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Guardian.Moin.EvacueeModule.DataContract" />
+  <xs:complexType name="SearchRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentPage" type="xs:int" />
+      <xs:element minOccurs="0" name="IsMfDateOutcome" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxRowsPerPage" type="xs:int" />
+      <xs:element minOccurs="0" name="MefuneID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MehozId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MfAddHouseNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MfAge" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MfDateIncomeBegin" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MfDateIncomeEnd" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MfFather" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MfFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MfGender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MfLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MitkanNum" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RashutID" nillable="true" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Guardian.Moin.EvacueeModule.DataContract" minOccurs="0" name="SortingName" type="q1:SortingField" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Guardian.Moin.EvacueeModule.DataContract" minOccurs="0" name="SortingOrder" type="q2:SortingOrder" />
+      <xs:element minOccurs="0" name="StNum" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="YeshuvNum" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchRequest" nillable="true" type="tns:SearchRequest" />
+</xs:schema>

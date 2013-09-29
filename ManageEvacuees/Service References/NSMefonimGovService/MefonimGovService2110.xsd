@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/AddressResponse" elementFormDefault="qualified" targetNamespace="http://malamteam/AddressResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd5" namespace="http://malamteam/Address" />
+  <xs:complexType name="AddressResponse">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://malamteam/Address" minOccurs="0" name="Address" nillable="true" type="q1:ArrayOfAddress" />
+      <xs:element minOccurs="0" name="ErrorDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddressResponse" nillable="true" type="tns:AddressResponse" />
+</xs:schema>

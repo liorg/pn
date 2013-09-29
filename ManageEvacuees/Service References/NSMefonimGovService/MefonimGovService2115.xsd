@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Guardian.Moin.EvacueeModule.DataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Guardian.Moin.EvacueeModule.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="SortingField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MfLastName" />
+      <xs:enumeration value="MfFirstName" />
+      <xs:enumeration value="ReshutAddress" />
+      <xs:enumeration value="ShiltonMekomiAddress" />
+      <xs:enumeration value="MfFather" />
+      <xs:enumeration value="MfGender" />
+      <xs:enumeration value="MfAge" />
+      <xs:enumeration value="IsMfDateOutcome" />
+      <xs:enumeration value="RashutName" />
+      <xs:enumeration value="MitkanName" />
+      <xs:enumeration value="MitkanAddress" />
+      <xs:enumeration value="MitkanPhone" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SortingField" nillable="true" type="tns:SortingField" />
+  <xs:simpleType name="SortingOrder">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ASC" />
+      <xs:enumeration value="DESC" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SortingOrder" nillable="true" type="tns:SortingOrder" />
+  <xs:simpleType name="SortingMitkanimField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MitkanName" />
+      <xs:enumeration value="RashutName" />
+      <xs:enumeration value="MahozName" />
+      <xs:enumeration value="MitkanAddress" />
+      <xs:enumeration value="SumAll" />
+      <xs:enumeration value="Sum3" />
+      <xs:enumeration value="Sum4To6" />
+      <xs:enumeration value="Sum7To18" />
+      <xs:enumeration value="Sum19To65" />
+      <xs:enumeration value="Sum66" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SortingMitkanimField" nillable="true" type="tns:SortingMitkanimField" />
+</xs:schema>

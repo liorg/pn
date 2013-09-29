@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="qzS7+1TElwUe/3mHLPtpbYvJJIs=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="X/s77sCi6zZ85xeUlnBTSSKsyUU=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="customBinding" name="MefonimGovServiceEndpoint">
+    <bindingConfiguration bindingType="customBinding" name="MefonimGovServiceEndpoint1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>MefonimGovServiceEndpoint</serializedValue>
+          <serializedValue>MefonimGovServiceEndpoint1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -716,10 +716,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="MefonimGovServiceEndpoint" contract="NSMefonimGovService.IMefonimGovService" bindingType="customBinding" address="http://crm11moin/MefonimGovService.svc" bindingConfiguration="MefonimGovServiceEndpoint">
+    <endpoint name="MefonimGovServiceEndpoint" contract="NSMefonimGovService.IMefonimGovService" bindingType="customBinding" address="http://localhost/MoinLocalGovDataService/MefonimGovService.svc" bindingConfiguration="MefonimGovServiceEndpoint1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://crm11moin/MefonimGovService.svc</serializedValue>
+          <serializedValue>http://localhost/MoinLocalGovDataService/MefonimGovService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -728,7 +728,7 @@
           <serializedValue>customBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>MefonimGovServiceEndpoint</serializedValue>
+          <serializedValue>MefonimGovServiceEndpoint1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>NSMefonimGovService.IMefonimGovService</serializedValue>
@@ -752,7 +752,7 @@
           <serializedValue>System.ServiceModel.Configuration.ServicePrincipalNameElement</serializedValue>
         </property>
         <property path="/identity/servicePrincipalName/value" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>host/CRM11MOIN.gdevdom.goffice.local</serializedValue>
+          <serializedValue>host/sarashalap.goffice.local</serializedValue>
         </property>
         <property path="/identity/dns" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.DnsElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.DnsElement</serializedValue>

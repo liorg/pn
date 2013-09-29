@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/SearchMitkanimResponse" elementFormDefault="qualified" targetNamespace="http://malamteam/SearchMitkanimResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd16" namespace="http://malamteam/ReportMitkanim" />
+  <xs:import schemaLocation="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Guardian.Moin.EvacueeModule.DataContract" />
+  <xs:complexType name="SearchMitkanimResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentPage" type="xs:int" />
+      <xs:element xmlns:q1="http://malamteam/ReportMitkanim" minOccurs="0" name="Data" nillable="true" type="q1:ArrayOfReportMitkanim" />
+      <xs:element minOccurs="0" name="ErrorDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxRowsPerPage" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Guardian.Moin.EvacueeModule.DataContract" minOccurs="0" name="SortingName" type="q2:SortingMitkanimField" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Guardian.Moin.EvacueeModule.DataContract" minOccurs="0" name="SortingOrder" type="q3:SortingOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchMitkanimResponse" nillable="true" type="tns:SearchMitkanimResponse" />
+</xs:schema>

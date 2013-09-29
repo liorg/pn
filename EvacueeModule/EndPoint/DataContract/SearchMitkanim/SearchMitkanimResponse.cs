@@ -31,6 +31,10 @@ namespace Guardian.Moin.EvacueeModule.DataContract
         [DataMember]
         public IEnumerable<ReportMitkanim> Data { get; set; }
 
+        [DataMember]
+        public int TotalPages { get; set; }
+
+
 
     }
 }

@@ -1,4 +1,5 @@
-﻿create proc [dbo].[gs_getAgeType]
+﻿
+create proc gs_getAgeType
 
 as
 begin

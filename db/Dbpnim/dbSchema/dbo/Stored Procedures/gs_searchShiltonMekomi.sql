@@ -1,5 +1,4 @@
-﻿
--- =============================================
+﻿-- =============================================
 -- Author:		Lior Grossman
 -- Create date: 2013-09-11
 -- Description:	Search Mefunim
@@ -8,7 +7,7 @@
  --exec [gs_searchShiltonMekomi] 'MfLastName desc',1,15,@MfGender=' ז  '
  --exec [gs_searchShiltonMekomi] 'MfAge desc',1,15,@MfAge=5
 --exec [gs_searchShiltonMekomi] 'MfAge desc',1,15,@MfFather='אילן '
-  
+  --exec [gs_searchShiltonMekomi] 'MfAge desc',1,15,@MfFather='איל '
 CREATE PROCEDURE [dbo].[gs_searchShiltonMekomi]
     @pOrderBy nvarchar(100),@pCurrentPage int,@pPageSize tinyint
     ,@MfDateIncomeBegin datetime=null,@MfDateIncomeEnd datetime=null
@@ -28,8 +27,10 @@ BEGIN
 	DECLARE @BeginAgeValue int=null;
 	DECLARE @EndAgeValue int=null;
 
-
-
+--IF (@MfFather IS NOT NULL)
+--BEGIN
+--  set @MfFather=@MfFather+'%'
+--end
 IF (@MfAge IS NOT NULL)
 BEGIN
 SELECT @BeginAgeValue=[BeginValue]
@@ -45,7 +46,8 @@ SET @intEndRow   = @pCurrentPage * @pPageSize;
 SELECT Row,MefuneSysNum,MitkanID,MefuneID
         ,MfFirstName,MfLastName,MfGender,MfFather,MfAge
         ,IsMfDateOutcome
-	    ,ShiltonMekomiAddress
+        ,MfAddHouseNum,StName,YeshuvName
+	    --,ShiltonMekomiAddress
 	    ,RashutName,RashutID
 		,MitkanAddress,MitkanName,MitkanNum,MitkanPhone
 		-- for debug
@@ -56,7 +58,12 @@ FROM
          	--WHEN 'MefuneID ASC'  THEN cast(MefuneID as sql_variant)
 			WHEN 'MfLastName ASC'  THEN MfLastName
 			WHEN 'MfFirstName ASC' THEN MfFirstName
-			WHEN 'ShiltonMekomiAddress ASC' THEN ISNULL(stname,'') + ' ' + ISNULL(cast(MfAddHouseNum as nvarchar(10)),'')+ ' '+ ISNULL(YeshuvName,'')		
+			
+		    WHEN 'MfAddHouseNum ASC' THEN cast(MfAddHouseNum as sql_variant)
+			WHEN 'StName ASC' THEN StName
+			WHEN 'YeshuvName ASC' THEN YeshuvName
+			--WHEN 'ShiltonMekomiAddress ASC' THEN ISNULL(stname,'') + ' ' + ISNULL(cast(MfAddHouseNum as nvarchar(10)),'')+ ' '+ ISNULL(YeshuvName,'')		
+			
 			WHEN 'MfFather ASC' THEN MfFather
 			WHEN 'MfGender ASC' THEN MfGender
 			WHEN 'MfAge ASC' THEN cast(MfAge as sql_variant)
@@ -70,7 +77,12 @@ FROM
 		--	WHEN 'MefuneID DESC'  THEN cast(MefuneID as sql_variant)
 			WHEN 'MfLastName DESC' THEN MfLastName
 			WHEN 'MfFirstName DESC' THEN MfFirstName
-			WHEN 'ShiltonMekomiAddress DESC' THEN ISNULL(stname,'') + ' ' + ISNULL(cast(MfAddHouseNum as nvarchar(10)),'')+ ' '+ ISNULL(YeshuvName,'')	
+			
+			WHEN 'MfAddHouseNum DESC' THEN cast(MfAddHouseNum as sql_variant)
+			WHEN 'StName DESC' THEN StName
+			WHEN 'YeshuvName DESC' THEN YeshuvName
+			--WHEN 'ShiltonMekomiAddress DESC' THEN ISNULL(stname,'') + ' ' + ISNULL(cast(MfAddHouseNum as nvarchar(10)),'')+ ' '+ ISNULL(YeshuvName,'')	
+			
 			WHEN 'MfFather DESC' THEN MfFather
 			WHEN 'MfGender DESC' THEN MfGender
 			WHEN 'MfAge DESC' THEN cast(MfAge as sql_variant)
@@ -82,8 +94,8 @@ FROM
 		END DESC) AS Row, 
 		MitkanID,MefuneID,MfFirstName,MfLastName,MfGender,MfFather,MfAge
 		,case when MfDateOutcome is null then 1 else 0 END AS IsMfDateOutcome 
-		 ,ISNULL(stname,'') + ' ' + ISNULL(cast(MfAddHouseNum as nvarchar(10)),'')+ ' '+ ISNULL(YeshuvName,'') as ShiltonMekomiAddress		
-		
+		 --,ISNULL(stname,'') + ' ' + ISNULL(cast(MfAddHouseNum as nvarchar(10)),'')+ ' '+ ISNULL(YeshuvName,'') as ShiltonMekomiAddress		
+		,stname,MfAddHouseNum,YeshuvName
 		,rash.RashutName,rash.RashutID
 		,m.Address as MitkanAddress,m.MitkanName,m.MitkanNum,m.Phone as MitkanPhone
 		,MfDateIncome
@@ -103,11 +115,11 @@ FROM
 			  (@MehozId is null or @MehozId=rash.Mahoz) AND
 			  (@MitkanNum is null or @MitkanNum=m.MitkanNum) AND
 			  (@RashutID is null or @RashutID=rash.RashutID)  AND
-			  (@MfFirstName is null or ltrim(rtrim(@MfFirstName))=ltrim(rtrim(MfFirstName)))  AND
-			  (@MfLastName is null or ltrim(rtrim(@MfLastName))=ltrim(rtrim(MfLastName)))  AND
-			  (@MfGender is null or ltrim(rtrim(@MfGender))=ltrim(rtrim(MfGender)))  AND
+			  (@MfFirstName is null or ltrim(rtrim(MfFirstName)) like ltrim(rtrim(@MfFirstName))+'%')   AND
+			  (@MfLastName is null or ltrim(rtrim(MfLastName)) like ltrim(rtrim(@MfLastName))+'%')  AND
+			  (@MfGender is null or ltrim(rtrim(MfGender)) like ltrim(rtrim(@MfGender))+'%')  AND
 			  (@MefuneID is null or @MefuneID=MefuneID)  AND
-			  (@MfFather is null or ltrim(rtrim(@MfFather))=ltrim(rtrim(MfFather)))  AND
+			  (@MfFather is null or  ltrim(rtrim(MfFather)) like ltrim(rtrim(@MfFather))+'%')  AND
 			  (@BeginAgeValue is null or @BeginAgeValue<=MfAge)  AND
 			  (@EndAgeValue is null or @EndAgeValue>=MfAge)  AND
 			  (@YeshuvNum is null or @YeshuvNum=YeshuvNum)  AND
@@ -117,4 +129,33 @@ FROM
 		) AS ShiltonMekomiWithRowNumbers
 			WHERE  Row BETWEEN @intStartRow AND @intEndRow
 	    ORDER BY Row
+	    
+	    
+	    select COUNT(*) as cnt 
+	    FROM ShiltonMekomi sm
+		LEFT JOIN dbo.Yeshuvim  y
+		ON sm.MfAddCityCode=y.YeshuvNum
+		outer apply (select StYeshuv,StNum,StName from dbo.Rehovot re where SM.MfAddStreetCode=re.StNum and re.StYeshuv=y.YeshuvNum) r
+		LEFT JOIN  Mitkanim m
+		on sm.MitkanID=m.MitkanNum
+		inner join dbo.Rashuyot rash
+		on rash.RashutID=m.RashutID
+		where 
+			  (@MfDateIncomeBegin is null or @MfDateIncomeBegin<=MfDateIncome) AND
+			  (@MfDateIncomeEnd is null or @MfDateIncomeEnd>MfDateIncome) AND
+			  (@MehozId is null or @MehozId=rash.Mahoz) AND
+			  (@MitkanNum is null or @MitkanNum=m.MitkanNum) AND
+			  (@RashutID is null or @RashutID=rash.RashutID)  AND
+			  (@MfFirstName is null or ltrim(rtrim(MfFirstName)) like ltrim(rtrim(@MfFirstName))+'%')   AND
+			  (@MfLastName is null or ltrim(rtrim(MfLastName)) like ltrim(rtrim(@MfLastName))+'%')  AND
+			  (@MfGender is null or ltrim(rtrim(MfGender)) like ltrim(rtrim(@MfGender))+'%')  AND
+			  (@MefuneID is null or @MefuneID=MefuneID)  AND
+			  (@MfFather is null or  ltrim(rtrim(MfFather)) like ltrim(rtrim(@MfFather))+'%')  AND
+			  (@BeginAgeValue is null or @BeginAgeValue<=MfAge)  AND
+			  (@EndAgeValue is null or @EndAgeValue>=MfAge)  AND
+			  (@YeshuvNum is null or @YeshuvNum=YeshuvNum)  AND
+			  (@StNum is null or @StNum=StNum)  AND
+			  (@MfAddHouseNum is null or LTRIM(RTRIM(@MfAddHouseNum))=LTRIM(RTRIM(MfAddHouseNum)))  AND
+			  (@IsMfDateOutcome is null or ((MfDateOutcome IS NOT NULL AND @IsMfDateOutcome=1) OR (MfDateOutcome IS  NULL AND @IsMfDateOutcome=0)))  
+		
 END

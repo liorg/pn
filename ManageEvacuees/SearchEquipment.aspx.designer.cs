@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ManageEvacuateds {
+namespace ManageEvacuees {
     
     
     public partial class SearchEquipment {
@@ -22,15 +22,6 @@ namespace ManageEvacuateds {
         protected global::System.Web.UI.WebControls.Label lblArea;
         
         /// <summary>
-        /// txtArea control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArea;
-        
-        /// <summary>
         /// lblLocalArea control.
         /// </summary>
         /// <remarks>
@@ -38,15 +29,6 @@ namespace ManageEvacuateds {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLocalArea;
-        
-        /// <summary>
-        /// txtLocalArea control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLocalArea;
         
         /// <summary>
         /// lblEquipName control.
@@ -58,30 +40,12 @@ namespace ManageEvacuateds {
         protected global::System.Web.UI.WebControls.Label lblEquipName;
         
         /// <summary>
-        /// txtEquipName control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEquipName;
-        
-        /// <summary>
-        /// btnClear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClear;
-        
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnSearch;
     }
 }

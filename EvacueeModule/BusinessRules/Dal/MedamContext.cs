@@ -278,10 +278,10 @@ namespace Guardian.Moin.EvacueeModule.Dal
             return sortingName.ToString() + " " + sortingOrder.ToString();
         }
 
-        internal Result<IEnumerable<ShiltonMekomi>> GetShiltonMekomiByModelAndPages(SearchRequest request)
+        internal ResultWithTotalRows<IEnumerable<ShiltonMekomi>> GetShiltonMekomiByModelAndPages(SearchRequest request)
         {
             var orderBy = GenerateSortingFieldAndOrder(request.SortingName, request.SortingOrder);
-            var result = new Result<IEnumerable<ShiltonMekomi>>();
+            var result = new ResultWithTotalRows<IEnumerable<ShiltonMekomi>>();
             var data = new List<ShiltonMekomi>();
             result.IsError = false;
             var connection = GetSqlConnection();
@@ -320,7 +320,8 @@ namespace Guardian.Moin.EvacueeModule.Dal
                         item.MefuneID = (drOutput["MefuneID"] != Convert.DBNull) ? long.Parse(drOutput["MefuneID"].ToString()) : 0;
                         item.MfLastName = (drOutput["MfLastName"] != Convert.DBNull) ? drOutput["MfLastName"].ToString() : null;
                         item.MfFirstName = (drOutput["MfFirstName"] != Convert.DBNull) ? drOutput["MfFirstName"].ToString() : null;
-                        item.ShiltonMekomiAddress = (drOutput["ShiltonMekomiAddress"] != Convert.DBNull) ? drOutput["ShiltonMekomiAddress"].ToString() : null;
+
+                        // item.ShiltonMekomiAddress = (drOutput["ShiltonMekomiAddress"] != Convert.DBNull) ? drOutput["ShiltonMekomiAddress"].ToString() : null;
                         item.MfAge = (drOutput["MfAge"] != Convert.DBNull) ? (int?)int.Parse(drOutput["MfAge"].ToString()) : null;
 
                         item.Mitkan = new Mitkanim();
@@ -333,9 +334,27 @@ namespace Guardian.Moin.EvacueeModule.Dal
                         item.Mitkan.Rashut.RashutID = (drOutput["RashutID"] != Convert.DBNull) ? int.Parse(drOutput["RashutID"].ToString()) : 0;
                         item.Mitkan.Rashut.RashutName = (drOutput["RashutName"] != Convert.DBNull) ? drOutput["RashutName"].ToString() : null;
 
+                        item.Rehovot = new Rehovot();
+                        item.Rehovot.StName = (drOutput["StName"] != Convert.DBNull) ? drOutput["StName"].ToString() : null;
+
+                        item.Yeshuv = new Yeshuvim();
+                        item.Yeshuv.YeshuvName = (drOutput["YeshuvName"] != Convert.DBNull) ? drOutput["YeshuvName"].ToString() : null;
+
+                        item.MfAddHouseNum = (drOutput["MfAddHouseNum"] != Convert.DBNull) ? (int?)int.Parse(drOutput["MfAddHouseNum"].ToString()) : null;
+
                         data.Add(item);
+
                     }
                     result.Return = data;
+                    bool hasNextResult = drOutput.NextResult();
+                    if (hasNextResult)
+                    {
+                        while (drOutput.Read())
+                        {
+                            result.TotalRows = Convert.ToInt32(drOutput.GetValue(0));
+                            break;
+                        }
+                    }
                 }
             }
             catch (Exception ee)
@@ -384,10 +403,10 @@ namespace Guardian.Moin.EvacueeModule.Dal
             return result;
         }
 
-        internal Result<IEnumerable<ReportMitkanim>> ExcuteReportMitkanim(SearchMitkanimRequest request)
+        internal ResultWithTotalRows<IEnumerable<ReportMitkanim>> ExcuteReportMitkanim(SearchMitkanimRequest request)
         {
             var orderBy = GenerateSortingFieldAndOrder(request.SortingName, request.SortingOrder);
-            var result = new Result<IEnumerable<ReportMitkanim>>();
+            var result = new ResultWithTotalRows<IEnumerable<ReportMitkanim>>();
             var data = new List<ReportMitkanim>();
             result.IsError = false;
             var connection = GetSqlConnection();
@@ -402,7 +421,6 @@ namespace Guardian.Moin.EvacueeModule.Dal
                 command.Parameters.Add("@MahozNum", request.MahozNum);
                 command.Parameters.Add("@MitkanNum", request.MitkanNum);
                 command.Parameters.Add("@RashutID", request.RashutID);
-           
 
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 connection.Open();
@@ -415,13 +433,14 @@ namespace Guardian.Moin.EvacueeModule.Dal
                         var item = new ReportMitkanim();
                         item.MahozNum = (drOutput["MahozNum"] != Convert.DBNull) ? (int?)int.Parse(drOutput["MahozNum"].ToString()) : null;
                         item.MahozName = (drOutput["MahozName"] != Convert.DBNull) ? drOutput["MahozName"].ToString() : null;
-                       
+
                         item.MitkanNum = (drOutput["MitkanNum"] != Convert.DBNull) ? (int?)int.Parse(drOutput["MitkanNum"].ToString()) : null;
                         item.MitkanName = (drOutput["MitkanName"] != Convert.DBNull) ? drOutput["MitkanName"].ToString() : null;
-                       
+
                         item.RashutID = (drOutput["RashutID"] != Convert.DBNull) ? (int?)int.Parse(drOutput["RashutID"].ToString()) : null;
                         item.RashutName = (drOutput["RashutName"] != Convert.DBNull) ? drOutput["RashutName"].ToString() : null;
-                       
+                        item.MitkanAddress = (drOutput["MitkanAddress"] != Convert.DBNull) ? drOutput["MitkanAddress"].ToString() : null;
+
                         item.Sum19To65 = (drOutput["Sum19To65"] != Convert.DBNull) ? (int?)int.Parse(drOutput["Sum19To65"].ToString()) : null;
                         item.Sum3 = (drOutput["Sum3"] != Convert.DBNull) ? (int?)int.Parse(drOutput["Sum3"].ToString()) : null;
                         item.Sum4To6 = (drOutput["Sum4To6"] != Convert.DBNull) ? (int?)int.Parse(drOutput["Sum4To6"].ToString()) : null;
@@ -431,8 +450,17 @@ namespace Guardian.Moin.EvacueeModule.Dal
                         data.Add(item);
                     }
                     result.Return = data;
+                    bool hasNextResult = drOutput.NextResult();
+                    if (hasNextResult)
+                    {
+                        while (drOutput.Read())
+                        {
+                            result.TotalRows =Convert.ToInt32(drOutput.GetValue(0));
+                            break;
+                        }
+                    }
                 }
-               
+
             }
             catch (Exception ee)
             {

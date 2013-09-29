@@ -9,8 +9,9 @@ namespace Guardian.Moin.EvacueeModule.DataContract
 {
     public enum SortingField
     {
-        MfLastName = 0, MfFirstName, ReshutAddress,
-        ShiltonMekomiAddress, MfFather, MfGender, MfAge, IsMfDateOutcome, RashutName, MitkanName, MitkanAddress, MitkanPhone
+        MfLastName = 0, MfFirstName, ReshutAddress
+            , YeshuvName, StName,  MfAddHouseNum
+            , MfFather, MfGender, MfAge, IsMfDateOutcome, RashutName, MitkanName, MitkanAddress, MitkanPhone
     };
    
 }

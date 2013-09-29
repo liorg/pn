@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * jQuery JavaScript Library v1.9.1
  * http://jquery.com/
  *
@@ -10,7 +10,7 @@
  * http://jquery.org/license
  *
  * Date: 2013-2-4
- */
+ */ 
 (function( window, undefined ) {
 
 // Can't do this because several apps including ASP.NET trace

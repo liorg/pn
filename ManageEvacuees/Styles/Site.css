@@ -300,7 +300,7 @@ div.accountInfo
 }
 .logo
 {
-    background-image:url(/Images/Header.jpg);
+    background-image:url(../Images/Header.jpg);
     width:872px;
     height:73px;
     padding-right:102px;
@@ -325,7 +325,7 @@ div.accountInfo
 }
 .leftNavigation LI
 {    
-    background: transparent url(/Images/gray-arrow-c.png) no-repeat right;
+    background: transparent url(../Images/gray-arrow-c.png) no-repeat right;
     border: 0px;
     border-top: 1px solid #dadada;
     height: 25px;
@@ -334,3 +334,10 @@ div.accountInfo
     list-style-type: none;
     list-style: none;
 }
+
+.ui-jqgrid .ui-jqgrid-htable th div .ui-jqgrid-sortable  {
+    height:auto;
+    overflow:hidden;
+    white-space:normal !important;
+}
+/*#1d4d8d*/

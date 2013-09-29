@@ -24,6 +24,10 @@ namespace Guardian.Moin.EvacueeModule.DataModel
         [DataMember]
         public string RashutName { get; set; }
 
+        [DataMember]
+        public string MitkanAddress { get; set; }
+        
+
         //סה"כ קלוטים במתקן
         [DataMember]
         public int? SumAll { get; set; }

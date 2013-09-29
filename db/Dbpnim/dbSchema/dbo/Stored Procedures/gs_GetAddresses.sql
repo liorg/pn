@@ -4,7 +4,7 @@
 -- Description:	<Description,,>
 -- =============================================
 --exec gs_GetAddresses
-CREATE PROCEDURE [dbo].[gs_GetAddresses]
+CREATE PROCEDURE gs_GetAddresses
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from

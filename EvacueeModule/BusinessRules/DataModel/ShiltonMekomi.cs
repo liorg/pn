@@ -46,8 +46,8 @@ namespace Guardian.Moin.EvacueeModule.DataModel
         [DataMember]
         public DateTime? MfDateIncome { get; set; }
 
-        [DataMember]
-        public string ShiltonMekomiAddress { get; set; }
+        //[DataMember]
+        //public string ShiltonMekomiAddress { get; set; }
 
         //complex type
         [DataMember]
@@ -55,18 +55,16 @@ namespace Guardian.Moin.EvacueeModule.DataModel
 
         //מס' בית
         [DataMember]
-        public string MfAddHouseNum { get; set; }
+        public int? MfAddHouseNum { get; set; }
 
         //ישוב המגורים
         [DataMember]
-        public int? YeshuvNum { get; set; }
+        public Yeshuvim Yeshuv { get; set; }
 
         //רחוב מגורים
         [DataMember]
-        public int? StNum { get; set; }
-        //מס' בית
+        public Rehovot Rehovot { get; set; }
+    
 
-
-       
     }
 }

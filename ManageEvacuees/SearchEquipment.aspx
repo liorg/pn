@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
-    CodeBehind="SearchEquipment.aspx.cs" Inherits="ManageEvacuateds.SearchEquipment" %>
+    CodeBehind="SearchEquipment.aspx.cs" Inherits="ManageEvacuees.SearchEquipment" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
@@ -18,7 +18,7 @@
                         cellpadding="0" border="0">
                         <tr>
                             <td colspan="6">
-                                <span class="mainTitle searchBoxPredefinedTableTitles">איתור מתקנים</span>
+                                <span class="mainTitle searchBoxPredefinedTableTitles">מידע סטטיסטי על מפונים במתקנים</span>
                             </td>
                         </tr>
                         <tr>
@@ -28,7 +28,7 @@
                         </tr>
                         <tr>
                             <td colspan="6">
-                                <span class="mainTitle">פרטי אתר הפינוי</span>
+                                <span class="mainTitle">פרטי מרכז קליטה</span>
                             </td>
                         </tr>
                         <tr>
@@ -36,19 +36,28 @@
                                 <asp:Label ID="lblArea" runat="server" Text="מחוז"></asp:Label>
                             </td>
                             <td class="tcFreeTextSearch">
-                                <asp:TextBox runat="server" ID="txtArea"></asp:TextBox>
+                                <div class="ui-widget" >
+                                    <%--<asp:DropDownList runat="server" ID="ddlMahoz" class="eqMahoz Mahos"></asp:DropDownList>--%>
+                                    <select id="comboboxMehozot" style="display:none" class="eqMahoz Mahos" onchange="InitAreas(this);"> </select>
+                                </div>
                             </td>
                             <td class="searchBoxPredefinedTitles">
                                 <asp:Label ID="lblLocalArea" runat="server" Text="רשות מקומית"></asp:Label>
                             </td>
                             <td class="tcFreeTextSearch">
-                                <asp:TextBox runat="server" ID="txtLocalArea"></asp:TextBox>
+                                <div class="ui-widget" >
+                                    <%--<asp:TextBox runat="server" ID="txtLocalArea" class="area eqArea"></asp:TextBox>--%>
+                                    <select id="comboboxAreas" style="display:none" class="area eqArea" onchange="InitEquipments(this);"> </select>
+                                </div>
                             </td>
                             <td class="searchBoxPredefinedTitles">
                                 <asp:Label ID="lblEquipName" runat="server" Text="שם המתקן"></asp:Label>
                             </td>
                             <td class="tcFreeTextSearch">
-                                <asp:TextBox ID="txtEquipName" runat="server"></asp:TextBox>
+                                <div class="ui-widget" >
+                                    <%--<asp:TextBox ID="txtEquipName" runat="server" class="equip"></asp:TextBox>--%>
+                                    <select id="comboboxEquipment" style="display:none" class="equip" > </select><%--onchange="InitCities(this);"--%>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -56,14 +65,16 @@
                                 <table class="searchBoxPredefinedBtnsTable" border="0">
                                     <tr>
                                         <td>
-                                            <asp:Button runat="server" ID="btnClear" onmouseover="this.className='backBtnImgOver';"
+                                            <button id="btnClearAll" onmouseover="this.className='backBtnImgOver';"
                                                 onfocus="this.className='backBtnImgOver';" onmouseout="this.className='backBtnImg';"
-                                                onblur="this.className='backBtnImg';" title="נקה" CssClass="backBtnImg" Text="נקה" />
+                                                onblur="this.className='backBtnImg';" title="נקה" class="backBtnImg"
+                                                onclick="ClearAll();">נקה</button>
                                         </td>
                                         <td>
-                                            <asp:Button ID="Button1" runat="server" onmouseover="this.className='backBtnImgOver';"
+                                            <button id="btnSearch" runat="server" onmouseover="this.className='backBtnImgOver';"
                                                 onfocus="this.className='backBtnImgOver';" onmouseout="this.className='backBtnImg';"
-                                                onblur="this.className='backBtnImg';" title="חפש" CssClass="backBtnImg" Text="חפש" />
+                                                onblur="this.className='backBtnImg';" title="חפש" class="backBtnImg"
+                                                onclick="LoadEquipmentGridResults();" >חפש</button>
                                         </td>
                                     </tr>
                                 </table>
@@ -96,12 +107,13 @@
                         cellpadding="0" border="0">
                         <tr>
                             <td colspan="6">
-                                <span class="mainTitle">תוצאות האיתור</span>
+                                <span class="mainTitle">תוצאות איתור</span>
                             </td>
                         </tr>
                     </table>
+                    <div id="NoResults" style="display: none;"></div>
                     <div class="SearchResualt">
-                        <table id="grid">
+                        <table id="gridEquipment">
                         </table>
                     </div>
                 </div>

@@ -18,34 +18,37 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://crm11moin/MefonimGovService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/MoinLocalGovDataService/MefonimGovService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MefonimGovService.xsd" MetadataType="Schema" ID="2516edd9-98cc-4ca2-b883-1f9d34ccc8e0" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd8" />
-    <MetadataFile FileName="MefonimGovService.wsdl" MetadataType="Wsdl" ID="fd45aa5f-8388-4ddd-b10c-4a399d515a48" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="MefonimGovService1.wsdl" MetadataType="Wsdl" ID="98c1bee4-826d-426a-af72-1968574ee351" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?wsdl=wsdl1" />
-    <MetadataFile FileName="MefonimGovService1.xsd" MetadataType="Schema" ID="dad6c56c-f6c0-44b2-94fd-a65258ccd663" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd14" />
-    <MetadataFile FileName="MefonimGovService2.xsd" MetadataType="Schema" ID="c73a70e8-4efb-4ea0-83d7-82fcdde16bbd" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd20" />
-    <MetadataFile FileName="MefonimGovService3.xsd" MetadataType="Schema" ID="41e3b176-dac8-49ca-891b-6e56bc8e08f0" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd0" />
-    <MetadataFile FileName="MefonimGovService4.xsd" MetadataType="Schema" ID="e473e632-4bd2-42e0-88a5-52090fc3160c" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd2" />
-    <MetadataFile FileName="MefonimGovService5.xsd" MetadataType="Schema" ID="473d8dde-9889-4935-b57f-e5658f7dccbe" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd5" />
-    <MetadataFile FileName="MefonimGovService6.xsd" MetadataType="Schema" ID="feb85bf6-1e4f-41ab-947c-a8740e62602d" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd7" />
-    <MetadataFile FileName="MefonimGovService7.xsd" MetadataType="Schema" ID="3a3adc3b-09d5-43c6-964c-76f5d93b10fb" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd18" />
-    <MetadataFile FileName="MefonimGovService8.xsd" MetadataType="Schema" ID="a13c01b3-e5da-4a97-8b78-4b2f03752cee" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd1" />
-    <MetadataFile FileName="MefonimGovService9.xsd" MetadataType="Schema" ID="5f0ff308-1b21-456f-8307-f49487ad4e06" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd12" />
-    <MetadataFile FileName="MefonimGovService10.xsd" MetadataType="Schema" ID="d7255606-6103-4deb-bac5-2715193cc73e" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd6" />
-    <MetadataFile FileName="MefonimGovService11.xsd" MetadataType="Schema" ID="dc36ad3a-3595-46ee-a86e-b89797148d6e" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd9" />
-    <MetadataFile FileName="MefonimGovService12.xsd" MetadataType="Schema" ID="ac5d261a-e7e7-4b9c-94a1-77683aec65a2" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd11" />
-    <MetadataFile FileName="MefonimGovService13.xsd" MetadataType="Schema" ID="a4d386e0-f9ff-4e38-b138-9db2e6e58e86" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd13" />
-    <MetadataFile FileName="MefonimGovService14.xsd" MetadataType="Schema" ID="5777c711-4723-45ca-bcdb-c756552367d0" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd3" />
-    <MetadataFile FileName="MefonimGovService15.xsd" MetadataType="Schema" ID="b19a46e6-d466-4fd8-88dc-a92fb81a1d64" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd15" />
-    <MetadataFile FileName="MefonimGovService16.xsd" MetadataType="Schema" ID="b2b28f01-c779-4cff-b5b8-cc62c414a0b4" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd17" />
-    <MetadataFile FileName="MefonimGovService.disco" MetadataType="Disco" ID="5d14aad9-f511-4b9b-bd1d-8f6dfaa6dc3f" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?disco" />
-    <MetadataFile FileName="MefonimGovService17.xsd" MetadataType="Schema" ID="0ab4e2f8-9f15-4d25-a620-f8df9c068704" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd4" />
-    <MetadataFile FileName="MefonimGovService18.xsd" MetadataType="Schema" ID="f9b07838-6d9b-4076-9d59-8dd5f3694616" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd16" />
-    <MetadataFile FileName="MefonimGovService19.xsd" MetadataType="Schema" ID="38511e44-1491-407b-8653-f0114e6c9364" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd10" />
-    <MetadataFile FileName="MefonimGovService20.xsd" MetadataType="Schema" ID="093d2946-1bb3-4050-a4e4-103d21c039bb" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?xsd=xsd19" />
-    <MetadataFile FileName="MefonimGovService2.wsdl" MetadataType="Wsdl" ID="33d6da13-c43b-4d4d-a687-b5976f61b45e" SourceId="1" SourceUrl="http://crm11moin/MefonimGovService.svc?wsdl" />
+    <MetadataFile FileName="MefonimGovService.xsd" MetadataType="Schema" ID="c733cf9f-e408-4c75-ac44-f00567e83769" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd21" />
+    <MetadataFile FileName="MefonimGovService2118.xsd" MetadataType="Schema" ID="a9abcc70-fd5a-4db0-939b-7baa37c4deac" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd20" />
+    <MetadataFile FileName="MefonimGovService2116.xsd" MetadataType="Schema" ID="9c279f66-d71d-499c-af0f-1cf278a224c0" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MefonimGovService31.wsdl" MetadataType="Wsdl" ID="3f0b7e12-c05f-4982-b276-2c4af1259082" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?wsdl" />
+    <MetadataFile FileName="MefonimGovService2110.xsd" MetadataType="Schema" ID="b89bf244-9ff3-4cf4-b724-44e64bd9c4b5" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MefonimGovService218.xsd" MetadataType="Schema" ID="ebbb8fa3-a5d1-4df7-99d2-7594197d8079" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd19" />
+    <MetadataFile FileName="MefonimGovService2114.xsd" MetadataType="Schema" ID="91ad27a0-c273-466e-af3e-b1021252eb2e" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd18" />
+    <MetadataFile FileName="MefonimGovService32.wsdl" MetadataType="Wsdl" ID="7a7a63c7-a373-4010-aa0a-a57aa3cc2cbb" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="MefonimGovService1.disco" MetadataType="Disco" ID="802393e0-63eb-488e-a517-a85c6b860ba6" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?disco" />
+    <MetadataFile FileName="MefonimGovService211.xsd" MetadataType="Schema" ID="eefdb176-b4bf-4a5b-9ed0-7bebc6af1b9d" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MefonimGovService219.xsd" MetadataType="Schema" ID="a1b0bc65-f3fc-4077-b6d2-e82f3809b127" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd9" />
+    <MetadataFile FileName="MefonimGovService3.wsdl" MetadataType="Wsdl" ID="380e0112-c891-42b4-a7b8-d7a341f17c5b" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="MefonimGovService2115.xsd" MetadataType="Schema" ID="c3343ac1-8643-4deb-a96e-a56447641506" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd7" />
+    <MetadataFile FileName="MefonimGovService213.xsd" MetadataType="Schema" ID="8ad9a4b8-81cf-466c-8b54-dd69f8103cb7" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd14" />
+    <MetadataFile FileName="MefonimGovService217.xsd" MetadataType="Schema" ID="d7011b7d-527f-48f2-bfdf-74e6feae3953" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MefonimGovService2111.xsd" MetadataType="Schema" ID="907af8ef-43f3-4fb6-bdc8-cd7ef6bd72e0" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MefonimGovService2117.xsd" MetadataType="Schema" ID="752d0a61-2c54-4ee6-b275-886500f311bc" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd17" />
+    <MetadataFile FileName="MefonimGovService2112.xsd" MetadataType="Schema" ID="a8c19fd3-5f06-4e89-b2af-386f21230bee" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd16" />
+    <MetadataFile FileName="MefonimGovService2119.xsd" MetadataType="Schema" ID="e7a54474-cbf7-43b5-a8f7-57197dc5a476" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd15" />
+    <MetadataFile FileName="MefonimGovService216.xsd" MetadataType="Schema" ID="3a42a7b8-b770-4d2f-96c2-828ad7eacf04" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd5" />
+    <MetadataFile FileName="MefonimGovService2113.xsd" MetadataType="Schema" ID="00567cae-dd12-4071-aeef-212e4ac6efc4" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd8" />
+    <MetadataFile FileName="MefonimGovService21.xsd" MetadataType="Schema" ID="d71b3e27-c6af-4546-bd55-d9ca26c4c66d" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd6" />
+    <MetadataFile FileName="MefonimGovService215.xsd" MetadataType="Schema" ID="d15c3bd3-54b4-4d1e-adaf-01bc83a67578" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd13" />
+    <MetadataFile FileName="MefonimGovService2120.xsd" MetadataType="Schema" ID="6ee0e4d7-c112-4386-8f5a-5a50d810b61e" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd12" />
+    <MetadataFile FileName="MefonimGovService212.xsd" MetadataType="Schema" ID="ded5855f-8221-448c-85cf-dfe90c12ad88" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd11" />
+    <MetadataFile FileName="MefonimGovService214.xsd" MetadataType="Schema" ID="e828c11a-9d1a-4ae4-9cc1-5945688e8b1e" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd10" />
+    <MetadataFile FileName="MefonimGovService1.xsd" MetadataType="Schema" ID="d10c48a7-b6b7-4099-8e3c-f3cbda7f452d" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd23" />
+    <MetadataFile FileName="MefonimGovService2.xsd" MetadataType="Schema" ID="90f0fe30-f001-4295-a5c5-ec835e349983" SourceId="1" SourceUrl="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd22" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

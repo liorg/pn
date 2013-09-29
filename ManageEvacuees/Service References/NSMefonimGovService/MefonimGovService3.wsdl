@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://malamteam/MefonimGovServiceEndpoint" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://malamteam/IMefonimGovService" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://malamteam/MefonimGovServiceEndpoint" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:ProtectionToken>
+              <wsp:Policy>
+                <sp:SpnegoContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                  <wsp:Policy>
+                    <sp:RequireDerivedKeys />
+                  </wsp:Policy>
+                </sp:SpnegoContextToken>
+              </wsp:Policy>
+            </sp:ProtectionToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+            <sp:OnlySignEntireHeadersAndBody />
+          </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportRefKeyIdentifier />
+            <sp:MustSupportRefIssuerSerial />
+          </wsp:Policy>
+        </sp:Wss10>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust10>
+        <wsap:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_Ping_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_Ping_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_Login_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_Login_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_GetAddress_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_GetAddress_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_Search_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_Search_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_SearchMitkanim_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_SearchMitkanim_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_GetAgesType_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_GetAgesType_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_GetRashuyot_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_GetRashuyot_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_GetYeshuvim_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_GetYeshuvim_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_GetMitkanim_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_GetMitkanim_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_UpdateMefune_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="MefonimGovServiceEndpoint_UpdateMefune_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="From" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" />
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://malamteam/IMefonimGovService" location="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="MefonimGovServiceEndpoint" type="i0:IMefonimGovService">
+    <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://malamteam/IMefonimGovService/IMefonimGovService/Ping" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_Ping_Input_policy" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_Ping_output_policy" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://malamteam/IMefonimGovService/IMefonimGovService/Login" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_Login_Input_policy" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_Login_output_policy" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <soap:operation soapAction="http://malamteam/IMefonimGovService/IMefonimGovService/GetAddress" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_GetAddress_Input_policy" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_GetAddress_output_policy" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://malamteam/IMefonimGovService/IMefonimGovService/Search" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_Search_Input_policy" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_Search_output_policy" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchMitkanim">
+      <soap:operation soapAction="http://malamteam/IMefonimGovService/IMefonimGovService/SearchMitkanim" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_SearchMitkanim_Input_policy" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_SearchMitkanim_output_policy" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgesType">
+      <soap:operation soapAction="http://malamteam/IMefonimGovService/IMefonimGovService/GetAgesType" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_GetAgesType_Input_policy" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_GetAgesType_output_policy" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRashuyot">
+      <soap:operation soapAction="http://malamteam/IMefonimGovService/IMefonimGovService/GetRashuyot" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_GetRashuyot_Input_policy" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_GetRashuyot_output_policy" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYeshuvim">
+      <soap:operation soapAction="http://malamteam/IMefonimGovService/IMefonimGovService/GetYeshuvim" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_GetYeshuvim_Input_policy" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_GetYeshuvim_output_policy" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMitkanim">
+      <soap:operation soapAction="http://malamteam/IMefonimGovService/IMefonimGovService/GetMitkanim" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_GetMitkanim_Input_policy" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_GetMitkanim_output_policy" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMefune">
+      <soap:operation soapAction="http://malamteam/IMefonimGovService/IMefonimGovService/UpdateMefune" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_UpdateMefune_Input_policy" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#MefonimGovServiceEndpoint_UpdateMefune_output_policy" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

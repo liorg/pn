@@ -4,12 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
 
-namespace ManageEvacuateds.DataObjects
+namespace ManageEvacuees.DataObjects
 {
     public class JqGridResult<T>
     {
         public JqGridDataObject<T> jqGridDataObject { get; set; }
         public GroupHeaders groupHeaders { get; set; }
+        public string errorMessage { get; set; }
     }
 
     public class JqGridDataObject<T>
@@ -32,12 +33,12 @@ namespace ManageEvacuateds.DataObjects
         /// <summary>
         /// Total number of pages
         /// </summary>
-        public int totalPagesNumber { get { return 2; }  }
+        public int totalPagesNumber { get; set; }
 
         /// <summary>
         /// The current page number
         /// </summary>
-        public int pageNumber { get { return 1; } }
+        public int pageNumber { get; set; }
 
         ///// <summary>
         ///// Total number of records
@@ -199,7 +200,7 @@ namespace ManageEvacuateds.DataObjects
         {
             get
             {
-                return false;
+                return true;
             }
         }
 

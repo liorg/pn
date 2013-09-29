@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://malamteam/YeshuvimResponse" elementFormDefault="qualified" targetNamespace="http://malamteam/YeshuvimResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sarashalap.goffice.local/MoinLocalGovDataService/MefonimGovService.svc?xsd=xsd21" namespace="http://malamteam/Yeshuvim" />
+  <xs:complexType name="YeshuvimResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsError" type="xs:boolean" />
+      <xs:element xmlns:q1="http://malamteam/Yeshuvim" minOccurs="0" name="Yeshuvim" nillable="true" type="q1:ArrayOfYeshuvim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="YeshuvimResponse" nillable="true" type="tns:YeshuvimResponse" />
+</xs:schema>

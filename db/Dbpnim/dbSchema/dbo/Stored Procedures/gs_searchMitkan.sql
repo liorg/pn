@@ -76,4 +76,21 @@ select Row,
         ) a
       WHERE  Row BETWEEN @intStartRow AND @intEndRow
 	  ORDER BY Row
+	  
+	 select COUNT(*) as cnt from (
+		select me.MahozNum , me.MahozName as MahozName,
+		   r.RashutID as RashutID,  r.RashutName as RashutName, 
+	       m.MitkanNum as MitkanNum,m.MitkanName as MitkanName,m.Address AS MitkanAddress
+			from dbo.Mitkanim m
+		inner join dbo.ShiltonMekomi s
+			on m.MitkanNum=s.MitkanID
+			inner join dbo.Rashuyot r
+				on r.RashutID=m.RashutID
+				inner join dbo.Mehozot me
+					on me.MahozNum=r.Mahoz 
+	      where (@MitkanNum is null or m.MitkanNum=@MitkanNum) and
+		  (@MahozNum is null or me.MahozNum=@MahozNum) and 
+		  (@RashutID is null or r.RashutID=@RashutID)  
+	group by m.MitkanNum,m.MitkanName ,m.Address ,r.RashutName,me.MahozName,me.MahozNum,r.RashutID
+) a
 end
