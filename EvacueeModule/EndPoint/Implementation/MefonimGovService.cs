@@ -100,7 +100,7 @@ namespace Guardian.Moin.EvacueeModule
             var r = s.GetRashuyot();
             response.IsError = r.IsError;
             response.ErrorDesc = r.ErrorDesc;
-            response.Rashuyot = r.Return.Any() ? r.Return.ToList() : null;
+            response.Rashuyot = r.Return;
             return response;
         }
 
@@ -111,7 +111,7 @@ namespace Guardian.Moin.EvacueeModule
             var r = s.GetYeshuvim();
             response.IsError = r.IsError;
             response.ErrorDesc = r.ErrorDesc;
-            response.Yeshuvim = r.Return.Any() ? r.Return.ToList() : null;
+            response.Yeshuvim = r.Return;
             return response;
         }
 
@@ -122,7 +122,7 @@ namespace Guardian.Moin.EvacueeModule
             var r = s.GetMitkanim();
             response.IsError = r.IsError;
             response.ErrorDesc = r.ErrorDesc;
-            response.Mitkanim = r.Return.Any() ? r.Return.ToList() : null;
+            response.Mitkanim = r.Return;
             return response;
         }
 
