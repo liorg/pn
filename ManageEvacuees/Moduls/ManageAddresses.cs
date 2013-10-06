@@ -11,6 +11,7 @@ namespace ManageEvacuees.Moduls
     {
         public static Rashuyot[] GetAreas()
         {
+          
             MefonimGovServiceClient client = new MefonimGovServiceClient("MefonimGovServiceEndpoint");
             var response = client.GetRashuyot();
             
@@ -18,7 +19,7 @@ namespace ManageEvacuees.Moduls
             {
                 return response.Rashuyot;
             }
-            else
+            else 
             {
                 return null;
             }

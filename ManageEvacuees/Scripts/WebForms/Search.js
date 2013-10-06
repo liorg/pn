@@ -8,7 +8,7 @@
     //Init comboboxes Data
     InitComboboxes();
 });
-
+ 
 function LoadEquipmentGridResults() {
     var data = new Object();
     data.method = 'searchequipment';

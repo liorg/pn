@@ -1,8 +1,15 @@
-﻿
+﻿USE [MEDAM]
+GO
+/****** Object:  StoredProcedure [dbo].[gs_searchMitkan]    Script Date: 10/06/2013 14:29:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
 --EXEC  [dbo].[gs_searchMitkan] @pOrderBy='Sum66 DESC' ,@pCurrentPage=1,@pPageSize=7
 
 --EXEC  [dbo].[gs_searchMitkan]  @pOrderBy='Sum66 DESC' ,@pCurrentPage=1,@pPageSize=1 ,@RashutID=42650
-CREATE PROCEDURE [dbo].[gs_searchMitkan]
+ALTER PROCEDURE [dbo].[gs_searchMitkan]
   @pOrderBy nvarchar(100),@pCurrentPage int,@pPageSize tinyint,
   @MahozNum INT =NULL,@MitkanNum INT =NULL,@RashutID INT =NULL
   AS
@@ -94,3 +101,4 @@ select Row,
 	group by m.MitkanNum,m.MitkanName ,m.Address ,r.RashutName,me.MahozName,me.MahozNum,r.RashutID
 ) a
 end
+

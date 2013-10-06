@@ -8,7 +8,6 @@
             this._createShowAllButton();
         },
         _createAutocomplete: function () {
-            //debugger;
             var selected = this.element.children(":selected"),
             value = selected.val() ? selected.text() : "";
             this.input = $("<input>")
@@ -69,7 +68,6 @@
              });
         },
         _source: function (request, response) {
-            //debugger;
             var matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
             response(this.element.children("option").map(function () {
                 var text = $(this).text();

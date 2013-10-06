@@ -1,4 +1,11 @@
-﻿-- =============================================
+﻿USE [MEDAM]
+GO
+/****** Object:  StoredProcedure [dbo].[gs_searchShiltonMekomi]    Script Date: 10/06/2013 14:29:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
 -- Author:		Lior Grossman
 -- Create date: 2013-09-11
 -- Description:	Search Mefunim
@@ -8,7 +15,7 @@
  --exec [gs_searchShiltonMekomi] 'MfAge desc',1,15,@MfAge=5
 --exec [gs_searchShiltonMekomi] 'MfAge desc',1,15,@MfFather='אילן '
   --exec [gs_searchShiltonMekomi] 'MfAge desc',1,15,@MfFather='איל '
-CREATE PROCEDURE [dbo].[gs_searchShiltonMekomi]
+ALTER PROCEDURE [dbo].[gs_searchShiltonMekomi]
     @pOrderBy nvarchar(100),@pCurrentPage int,@pPageSize tinyint
     ,@MfDateIncomeBegin datetime=null,@MfDateIncomeEnd datetime=null
     ,@MehozId INT =NULL,@MitkanNum INT =NULL,@RashutID INT =NULL
