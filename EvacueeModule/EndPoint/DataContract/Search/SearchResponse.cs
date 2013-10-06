@@ -33,6 +33,6 @@ namespace Guardian.Moin.EvacueeModule.DataContract
         public SortingOrder SortingOrder { get; set; }
 
         [DataMember]
-        public int TotalPages { get; set; }
+        public int TotalRows { get; set; }
     }
 }

@@ -32,7 +32,7 @@ namespace Guardian.Moin.EvacueeModule.DataContract
         public IEnumerable<ReportMitkanim> Data { get; set; }
 
         [DataMember]
-        public int TotalPages { get; set; }
+        public int TotalRows { get; set; }
 
 
 

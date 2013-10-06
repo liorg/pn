@@ -51,7 +51,7 @@ namespace Guardian.Moin.EvacueeModule
             response.MaxRowsPerPage = request.MaxRowsPerPage;
             response.SortingName = request.SortingName;
             response.SortingOrder = request.SortingOrder;
-            response.TotalPages = r.TotalRows;
+            response.TotalRows = r.TotalRows;
             return response;
         }
 
@@ -67,7 +67,7 @@ namespace Guardian.Moin.EvacueeModule
             response.IsError = result.IsError;
             response.ErrorDesc = result.ErrorDesc;
             response.Data = result.Return;
-            response.TotalPages = result.TotalRows;
+            response.TotalRows = result.TotalRows;
             return response;
         }
 
